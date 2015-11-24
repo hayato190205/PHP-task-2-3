@@ -1,0 +1,71 @@
+@charset "UTF-8"
+/*h1タグの書式が変わらない*/
+
+h1{
+  color: #696969;
+  font-weight: bolder;
+  font-size: 48px;
+  margin: 20px 0;
+}
+
+p{
+  color: #696969;
+  margin-top: 10px;
+}
+
+form{
+  width: 100%;
+  height: auto;
+  padding: 10px 10px;
+  margin: 10px 0 0;
+  font-size: 20px;
+  background-color: #FFC0CB;
+}
+
+input{
+  border: 0;
+  padding: 10px;
+  font-size: 20px;
+  color: #aaa;
+  border: solid 1px #ccc;
+  margin:0;
+  width: 300px;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#button{
+  margin: 20px 0;
+  color: #696969;
+}
+
+
+ul li :hover{
+  background-color: #9966FF;
+  border: solid 1px #9966FF;
+  text-decoration: none;
+}
+
+textarea{
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  font-size: 20px;
+  border: solid 1px #ccc;
+  color: #aaa;
+}
+
+/*hoverで投稿ボタンのテキストの色が変わらない*/
+#button :hover{
+  color: #fff;
+}
+
+#container{
+  width: 960px;
+  margin: 0 auto;
+  padding: 10px;
+}
