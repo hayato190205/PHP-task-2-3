@@ -32,9 +32,11 @@ for ($i=2; $i<=100; ++$i)
     }
   }
 
+  echo $i;
   if($flg=="0")
   {
-    echo $i."<br>";
+    echo "(素数)";
   }
+  echo "<br />";
 }
 

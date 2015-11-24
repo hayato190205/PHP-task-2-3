@@ -29,7 +29,7 @@ if ($comment == null)
 {
   $errormsg[] = "（注）本文が未入力です。";
 }
-mb_send_mail("hayato190205@gmail.com", $name.$subject, $address . <br> . $comment);
+
 ?>
 <!DOCTYPE>
   <html lang="ja">
@@ -44,10 +44,11 @@ mb_send_mail("hayato190205@gmail.com", $name.$subject, $address . <br> . $commen
     <h1>内容確認</h1>
 
     <div class="error">
-    <?php if (count($errormsg) > 0); ?>
+    <?php if (count($errormsg) > 0): ?>
     <?php foreach($errormsg as $msg): ?>
       <?php echo htmlspecialchars($msg, ENT_QUOTES, "UTF-8")?><br>
     <?php endforeach; ?>
+    <?php endif ?>
    </div>
 
     <div class="content">
@@ -56,6 +57,8 @@ mb_send_mail("hayato190205@gmail.com", $name.$subject, $address . <br> . $commen
       <p>メールアドレス:</p><?php echo htmlspecialchars($address, ENT_QUOTES, "UTF-8"); ?><br>
       <p>本文:</p><?php echo htmlspecialchars($comment, ENT_QUOTES, "UTF-8"); ?><br>
     </div>
+
+    <?php if (count($errormsg) == 0): ?>
     <form action="thankyou.php" method="post">
       <input type="hidden" name="name" value="<?php echo htmlspecialchars($name, ENT_QUOTES, "UTF-8"); ?>">
       <input type="hidden" name="subject" value="<?php echo htmlspecialchars($subject, ENT_QUOTES, "UTF-8"); ?>">
@@ -64,10 +67,11 @@ mb_send_mail("hayato190205@gmail.com", $name.$subject, $address . <br> . $commen
       <input id="button1" type="submit" value="内容確認">
       <?php mb_send_mail ($to, "お問い合わせ内容: " . $subject, $comment); ?>
     </form>
+    <?php endif ?>
 
     <form action="index.php" method="post">
       <input id="button2" type="submit" value="戻る">
-    </form>
+    </form>ß
   </div>
   </body>
   </html>

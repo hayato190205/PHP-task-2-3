@@ -3,6 +3,8 @@ $name=$_POST['name'];
 $subject=$_POST['subject'];
 $address=$_POST['address'];
 $comment=$_POST['comment'];
+
+mb_send_mail($address, $subject, $name . "<br>" . $comment);
 ?>
 
 <!DOCTYPE html>

@@ -1,10 +1,10 @@
-@charset "UTF-8"
+@charset "UTF-8";
 /*h1タグの書式が変わらない*/
 
-h1{
-  color: #696969;
+h1 {
+  color: #696969!important;
   font-weight: bolder;
-  font-size: 48px;
+  font-size: 48px!important;
   margin: 20px 0;
 }
 
@@ -13,7 +13,7 @@ p{
   margin-top: 10px;
 }
 
-form{
+form {
   width: 100%;
   height: auto;
   padding: 10px 10px;
@@ -38,7 +38,7 @@ ul{
   margin: 0;
 }
 
-#button{
+#button {
   margin: 20px 0;
   color: #696969;
 }
@@ -48,9 +48,10 @@ ul li :hover{
   background-color: #9966FF;
   border: solid 1px #9966FF;
   text-decoration: none;
+  color: #fff!important;
 }
 
-textarea{
+textarea {
   width: 300px;
   height: 300px;
   padding: 10px;
@@ -60,9 +61,7 @@ textarea{
 }
 
 /*hoverで投稿ボタンのテキストの色が変わらない*/
-#button :hover{
-  color: #fff;
-}
+
 
 #container{
   width: 960px;
